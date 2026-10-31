@@ -1,0 +1,227 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F4F2F8"
+    android:fillViewport="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="20dp">
+
+        <!-- TITULO -->
+        <TextView
+            android:id="@+id/lblTitulo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="20dp"
+            android:gravity="center"
+            android:text="Inventario de productos"
+            android:textColor="@color/material_dynamic_tertiary10"
+            android:textSize="24sp"
+            android:textStyle="bold" />
+
+        <!-- CODIGO -->
+        <TextView
+            android:id="@+id/lblCodigo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Código del producto *"
+            android:textColor="@color/material_dynamic_tertiary10"
+            android:textStyle="bold" />
+
+        <EditText
+            android:id="@+id/txtCodigo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Ej. PROD-001"
+            android:inputType="textCapCharacters"
+            android:textColorHint="#777080" />
+
+        <!-- NOMBRE -->
+        <TextView
+            android:id="@+id/lblNombre"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Nombre del producto *"
+            android:textColor="@color/material_dynamic_tertiary10"
+            android:textStyle="bold" />
+
+        <EditText
+            android:id="@+id/txtNombre"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Ingresa el nombre"
+            android:inputType="textCapWords"
+            android:textColorHint="#777080" />
+
+        <!-- CANTIDAD INICIAL -->
+        <TextView
+            android:id="@+id/lblCantidad"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Cantidad inicial *"
+            android:textColor="@color/material_dynamic_tertiary10"
+            android:textStyle="bold" />
+
+        <EditText
+            android:id="@+id/txtCantidad"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Ingresa la cantidad"
+            android:inputType="number"
+            android:textColorHint="#777080" />
+
+        <!-- UNIDAD DE MEDIDA -->
+        <TextView
+            android:id="@+id/lblUnidad"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Unidad de medida *"
+            android:textColor="@color/material_dynamic_tertiary10"
+            android:textStyle="bold" />
+
+        <EditText
+            android:id="@+id/txtUnidad"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Ej. Pieza, caja, kilogramo..."
+            android:inputType="textCapWords"
+            android:textColorHint="#777080" />
+
+        <!-- DESCRIPCION -->
+        <TextView
+            android:id="@+id/lblDescripcion"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Descripción (opcional)"
+            android:textColor="@color/material_dynamic_tertiary10"
+            android:textStyle="bold" />
+
+        <EditText
+            android:id="@+id/txtDescripcion"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="top"
+            android:hint="Describe el producto"
+            android:inputType="textCapSentences|textMultiLine"
+            android:minLines="2"
+            android:textColorHint="#777080" />
+
+        <!-- CATEGORIA -->
+        <TextView
+            android:id="@+id/lblCategoria"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Categoría (opcional)"
+            android:textColor="@color/material_dynamic_tertiary10"
+            android:textStyle="bold" />
+
+        <EditText
+            android:id="@+id/txtCategoria"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Ej. Electrónica, embalaje..."
+            android:inputType="textCapWords"
+            android:textColorHint="#777080" />
+
+        <!-- PRECIO -->
+        <TextView
+            android:id="@+id/lblPrecio"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Precio unitario (opcional)"
+            android:textColor="@color/material_dynamic_tertiary10"
+            android:textStyle="bold" />
+
+        <EditText
+            android:id="@+id/txtPrecio"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Ej. 150.00"
+            android:inputType="numberDecimal"
+            android:textColorHint="#777080" />
+
+        <!-- STOCK MINIMO -->
+        <TextView
+            android:id="@+id/lblStockMinimo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Stock mínimo (opcional)"
+            android:textColor="@color/material_dynamic_tertiary10"
+            android:textStyle="bold" />
+
+        <EditText
+            android:id="@+id/txtStockMinimo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Cantidad mínima permitida"
+            android:inputType="number"
+            android:textColorHint="#777080" />
+
+
+        <!-- BOTONES CRUD -->
+
+        <!-- PRIMERA FILA -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center"
+            android:layout_marginTop="15dp">
+
+            <Button
+                android:id="@+id/btnRegistrar"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:backgroundTint="@color/material_dynamic_tertiary10"
+                android:text="Registrar"
+                android:textColor="@color/white" />
+
+            <Button
+                android:id="@+id/btnConsultar"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_weight="1"
+                android:backgroundTint="@color/material_dynamic_tertiary10"
+                android:text="Consultar"
+                android:textColor="@color/white" />
+
+        </LinearLayout>
+
+        <!-- SEGUNDA FILA -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center">
+
+            <Button
+                android:id="@+id/btnActualizar"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:backgroundTint="@color/material_dynamic_tertiary10"
+                android:text="Actualizar"
+                android:textColor="@color/white" />
+
+            <Button
+                android:id="@+id/btnEliminar"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_weight="1"
+                android:backgroundTint="#B83D4B"
+                android:text="Eliminar"
+                android:textColor="@color/white" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</ScrollView>
