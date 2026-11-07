@@ -1,7 +1,9 @@
 
-package com.example.recycleview;
+package com.example.recycleview.vistas;
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.graphics.Insets;
@@ -11,12 +13,16 @@ import androidx.core.view.WindowInsetsCompat;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.example.recycleview.R;
+import com.google.android.material.floatingactionbutton.FloatingActionButton;
+
 import java.util.ArrayList;
 import java.util.List;
 
 public class MainActivity extends AppCompatActivity {
 
     RecyclerView lista;
+    FloatingActionButton btninsertar;
     List<String> nombre;
     List<String> telefonos;
 
@@ -29,6 +35,14 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         lista = findViewById(R.id.lista);
+        btninsertar=findViewById(R.id.btninsertar);
+        btninsertar.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MainActivity.this, InventarioActivity.class);
+                startActivity(intent);
+            }
+        });
 
         nombre = new ArrayList<>();
         nombre.add("Sebastián");

@@ -12,24 +12,23 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.RecycleView">
 
-        <!-- Pantalla inicial: formulario de inventario -->
+        <!-- Pantalla del formulario de inventario -->
         <activity
-            android:name=".InventarioActivity"
-            android:exported="true"
-            android:windowSoftInputMode="adjustResize">
+            android:name=".vistas.InventarioActivity"
+            android:exported="false"
+            android:windowSoftInputMode="adjustResize" />
+
+        <!-- Pantalla inicial: RecyclerView -->
+        <activity
+            android:name=".vistas.MainActivity"
+            android:exported="true">
 
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
 
         </activity>
-
-        <!-- Pantalla del RecyclerView -->
-        <activity
-            android:name=".MainActivity"
-            android:exported="false" />
 
     </application>
 
